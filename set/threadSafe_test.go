@@ -160,9 +160,11 @@ func Test_DifferenceConcurrent(t *testing.T) {
 	var wg sync.WaitGroup
 	for i := range ints {
 		wg.Add(1)
-		i := i
+		// i := i
+		_ = i
 		go func() {
-			t.Logf("%d s.Difference(ss): %v", i, s.Difference(ss).String())
+			s.Difference(ss)
+			// t.Logf("%d s.Difference(ss): %v", i, s.Difference(ss).String())
 			wg.Done()
 		}()
 	}
