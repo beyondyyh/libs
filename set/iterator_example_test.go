@@ -14,7 +14,7 @@ type Guy struct {
 func Test_ExampleIterator(t *testing.T) {
 	set := NewSetWithSlice([]interface{}{
 		&Guy{Name: "John", Age: 21, Company: "Yahoo"},
-		&Guy{Name: "Yehong.Yang", Age: 18, Company: "Weibo"},
+		&Guy{Name: "Yehong.Yang", Age: 18, Company: "Baidu"},
 		&Guy{Name: "Bob", Age: 22, Company: "Aalibaba"},
 		&Guy{Name: "Nick", Age: 23, Company: "Tencent"},
 		&Guy{Name: "Mary", Age: 17, Company: "Bytedance"},
