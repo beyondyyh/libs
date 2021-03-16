@@ -5,7 +5,7 @@ import (
 )
 
 // DesECBEncrypt
-// Des算法，ECB应用模式
+// Des算法，ECB应用模式加密
 func DesECBEncrypt(src, key []byte, padding string) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {
@@ -15,6 +15,7 @@ func DesECBEncrypt(src, key []byte, padding string) ([]byte, error) {
 }
 
 // DesECBDecrypt
+// Des算法，ECB应用模式解密
 func DesECBDecrypt(src, key []byte, padding string) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {
@@ -25,6 +26,7 @@ func DesECBDecrypt(src, key []byte, padding string) ([]byte, error) {
 }
 
 // DesCBCEncrypt
+// Des算法，CBC应用模式加密
 func DesCBCEncrypt(src, key, iv []byte, padding string) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {
@@ -35,6 +37,7 @@ func DesCBCEncrypt(src, key, iv []byte, padding string) ([]byte, error) {
 }
 
 // DesCBCDecrypt
+// Des算法，CBC应用模式解密
 func DesCBCDecrypt(src, key, iv []byte, padding string) ([]byte, error) {
 	block, err := des.NewCipher(key)
 	if err != nil {

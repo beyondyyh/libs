@@ -69,5 +69,4 @@ func ZerosUnPadding(src []byte) []byte {
 			return src[:i+1]
 		}
 	}
-	return nil
 }
