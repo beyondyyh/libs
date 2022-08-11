@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -run TestTrie gitlab.weibo.cn/gdp/libs/trie
+// go test -v -run TestTrie github.com/beyondyyh/libs/trie
 func TestTrie(t *testing.T) {
 	assert := assert.New(t)
 

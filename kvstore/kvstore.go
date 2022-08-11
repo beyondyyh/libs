@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"gitlab.weibo.cn/gdp/libs/kvstore/store"
+	"github.com/beyondyyh/libs/kvstore/store"
 )
 
 // Initialize 创建一个store对象，并初始化

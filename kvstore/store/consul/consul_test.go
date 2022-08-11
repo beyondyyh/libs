@@ -6,13 +6,16 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"gitlab.weibo.cn/gdp/libs/kvstore"
-	"gitlab.weibo.cn/gdp/libs/kvstore/store"
-	"gitlab.weibo.cn/gdp/libs/kvstore/testutils"
+	"github.com/beyondyyh/libs/kvstore"
+	"github.com/beyondyyh/libs/kvstore/store"
+	"github.com/beyondyyh/libs/kvstore/testutils"
 )
 
+// run all: go test -v github.com/beyondyyh/libs/kvstore/store/consul
+
 var (
-	client = "consul-dev.im.weibo.cn:8500"
+	// client = "consul-dev.im.weibo.cn:8500"
+	client = "127.0.0.1:8500"
 )
 
 func makeConsulClient(t *testing.T) store.Store {
@@ -28,7 +31,7 @@ func makeConsulClient(t *testing.T) store.Store {
 	return kv
 }
 
-// go test -v -run TestRegister gitlab.weibo.cn/gdp/libs/kvstore/store/consul
+// go test -v -run TestRegister github.com/beyondyyh/libs/kvstore/store/consul
 func TestRegister(t *testing.T) {
 	Register()
 
@@ -42,7 +45,7 @@ func TestRegister(t *testing.T) {
 	}
 }
 
-// go test -v -run TestConsulStore gitlab.weibo.cn/gdp/libs/kvstore/store/consul
+// go test -v -run TestConsulStore github.com/beyondyyh/libs/kvstore/store/consul
 func TestConsulStore(t *testing.T) {
 	kv := makeConsulClient(t)
 	defer testutils.RunCleanup(t, kv)

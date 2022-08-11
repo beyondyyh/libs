@@ -4,15 +4,17 @@ import (
 	"context"
 	"testing"
 
+	"github.com/beyondyyh/libs/kvstore"
+	"github.com/beyondyyh/libs/kvstore/store"
+	"github.com/beyondyyh/libs/kvstore/testutils"
 	"github.com/stretchr/testify/assert"
-	"gitlab.weibo.cn/gdp/libs/kvstore"
-	"gitlab.weibo.cn/gdp/libs/kvstore/store"
-	"gitlab.weibo.cn/gdp/libs/kvstore/testutils"
 )
 
 var (
 	client = "localhost:6379"
 )
+
+// run all: go test -v github.com/beyondyyh/libs/kvstore/store/redis
 
 func makeRedisClient(t *testing.T) store.Store {
 	kv, err := newRedis([]string{client}, "", 0)
@@ -26,7 +28,7 @@ func makeRedisClient(t *testing.T) store.Store {
 	return kv
 }
 
-// go test -v -run TestRegister gitlab.weibo.cn/gdp/libs/kvstore/store/redis
+// go test -v -run TestRegister github.com/beyondyyh/libs/kvstore/store/redis
 func TestRegister(t *testing.T) {
 	Register()
 
@@ -40,7 +42,7 @@ func TestRegister(t *testing.T) {
 	}
 }
 
-// go test -v -run TestRedisStore gitlab.weibo.cn/gdp/libs/kvstore/store/redis
+// go test -v -run TestRedisStore github.com/beyondyyh/libs/kvstore/store/redis
 func TestRedisStore(t *testing.T) {
 	kv := makeRedisClient(t)
 	defer testutils.RunCleanup(t, kv)

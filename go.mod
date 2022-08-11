@@ -10,7 +10,6 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/hashicorp/consul/api v1.12.0
 	github.com/stretchr/testify v1.7.0
-	gitlab.weibo.cn/gdp/libs v1.2.3-20220420-01
 )
 
 require (

@@ -11,8 +11,8 @@ import (
 
 	"github.com/go-redis/redis/v8"
 
-	"gitlab.weibo.cn/gdp/libs/kvstore"
-	"gitlab.weibo.cn/gdp/libs/kvstore/store"
+	"github.com/beyondyyh/libs/kvstore"
+	"github.com/beyondyyh/libs/kvstore/store"
 )
 
 var (

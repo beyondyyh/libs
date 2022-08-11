@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/beyondyyh/libs/kvstore/store"
 	"github.com/stretchr/testify/assert"
-	"gitlab.weibo.cn/gdp/libs/kvstore/store"
 )
 
 // RunTestCommon tests the minimal required APIs which

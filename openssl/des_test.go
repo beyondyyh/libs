@@ -8,6 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// run: go test -v github.com/beyondyyh/libs/openssl
+
 func Test_DesECBEncrypt(t *testing.T) {
 	src := []byte("123456")
 
